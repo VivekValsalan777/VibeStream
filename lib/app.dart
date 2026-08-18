@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'core/theme/app_theme.dart';
-import 'core/navigation/routes.dart';
+import 'config/app_router.dart';
+import 'providers/auth_provider.dart';
+import 'theme/app_theme.dart';
 
-class VibeStreamApp extends StatelessWidget {
-  const VibeStreamApp({Key? key}) : super(key: key);
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'VibeStream',
-      theme: AppTheme.darkTheme,
-      routerConfig: AppRoutes.router,
       debugShowCheckedModeBanner: false,
+      theme: AppTheme.darkTheme,
+      routerConfig: AppRouter.router,
     );
   }
 }
